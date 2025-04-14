@@ -39,11 +39,14 @@ BKASH_APP_SECRET=your_app_secret
 Once installed, the following routes are available in your Laravel application.
 
 🔹 User Routes
+
 Route	Description
+
 /bkash-pay	Display payment form
 /bkash-create	Create bKash payment
 /bkash-callback	Handle payment callback
 🔹 Admin Routes
+
 Route	Description
 /bkash-refund	View refund form
 /bkash-refund (POST)	Process refund
@@ -67,12 +70,16 @@ bkash.search — Search Form
 To customize them, publish the views:
 
 bash
-
 php artisan vendor:publish --provider="Najmul\BkashPayment\BkashServiceProvider"
 Views will be published to:
 
 
 resources/views/vendor/bkash/
+
+Publish the Views
+php artisan vendor:publish --provider="Najmul\BkashPayment\BkashServiceProvider" --tag=views
+
+
 🧠 How It Works
 Token is fetched and stored in the bkash_token DB table.
 
@@ -99,3 +106,14 @@ GitHub: dev-najmul-islam
 Email: devnajmulislam52@gmail.com
 Laravel ❤️ bKash
 
+Sandbox Testing 
+
+SANDBOX          = true
+BKASH_USERNAME   = '01770618567'
+BKASH_PASSWORD   = 'D7DaC<*E*eG'
+BKASH_APP_KEY    = '0vWQuCRGiUX7EPVjQDr0EUAYtc'
+BKASH_APP_SECRET ='jcUNPBgbcqEDedNKdvE4G1cAK7D3hCjmJccNPZZBq96QIxxwAMEx'
+
+Phone : 01770618575
+Otp   : 123456
+Pin   : 12121

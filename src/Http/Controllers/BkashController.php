@@ -193,7 +193,7 @@ class BkashController extends Controller
 
     public function payment(Request $request)
     {
-        return view('bkash.pay');
+        return view('bkash::pay');
     }
 
     public function createPayment(Request $request)
@@ -208,7 +208,7 @@ class BkashController extends Controller
 
         $body_data = array(
             'mode' => '0011',
-            'payerReference' => $request->payerReference ? $request->payerReference : '', // pass oderId or anything
+            'payerReference' => $request->payerReference ? $request->payerReference : '0', // pass oderId or anything
             'callbackURL' => $website_url . '/bkash-callback',
             'amount' => $request->amount,
             'currency' => 'BDT',
@@ -266,17 +266,17 @@ class BkashController extends Controller
 
             if (array_key_exists("statusCode", $res_array) && $res_array['statusCode'] == '0000' && array_key_exists("transactionStatus", $res_array) && $res_array['transactionStatus'] == 'Completed') {
                 // payment success case
-                return view('bkash.success')->with([
+                return view('bkash::success')->with([
                     'response' => $res_array['trxID']
                 ]);
             }
 
-            return view('bkash.fail')->with([
+            return view('bkash::fail')->with([
                 'response' => $res_array['statusMessage'],
             ]);
 
         } else {
-            return view('bkash.fail')->with([
+            return view('bkash::fail')->with([
                 'response' => 'Payment Failed !!',
             ]);
         }
@@ -284,7 +284,7 @@ class BkashController extends Controller
     }
     public function getRefund(Request $request)
     {
-        return view('bkash.refund');
+        return view('bkash::refund');
     }
 
     public function refundPayment(Request $request)
@@ -325,7 +325,7 @@ class BkashController extends Controller
             $message = "Already Refunded !!.Your Refund TrxID : " . $res_array['refundTrxID'];
         }
 
-        return view('bkash.refund')->with([
+        return view('bkash::refund')->with([
             'response' => $message,
         ]);
     }
@@ -346,7 +346,7 @@ class BkashController extends Controller
 
     public function getSearchTransaction(Request $request)
     {
-        return view('bkash.search');
+        return view('bkash::search');
     }
 
     public function searchTransaction(Request $request)
@@ -360,7 +360,7 @@ class BkashController extends Controller
         $response = $this->curlWithBody('/tokenized/checkout/general/searchTransaction', $header, 'POST', json_encode($body_data));
 
 
-        return view('bkash.search')->with([
+        return view('bkash::search')->with([
             'response' => $response,
         ]);
     }
