@@ -1,28 +1,34 @@
 {
-  "name": "najmul/bkash-payment",
-  "description": "Laravel package for bKash payment integration",
-  "type": "library",
-  "license": "MIT",
-  "authors": [
+    "name": "najmul/bkash-payment",
+    "description": "Laravel package for bKash payment integration",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
       {
-          "name": "Najmul",
-          "email": "your-email@example.com"
+        "name": "Najmul",
+        "email": "devnajmulislam52@gmail.com"
       }
-  ],
-  "autoload": {
-      "psr-4": {
-          "Najmul\\BkashPayment\\": "src/"
-      }
-  },
-  "require": {
+    ],
+    "require": {
       "php": "^7.4|^8.0",
       "illuminate/support": "^8.0|^9.0|^10.0"
-  },
-  "extra": {
+    },
+    "autoload": {
+      "psr-4": {
+        "Najmul\\BkashPayment\\": "src/"
+      },
+      "classmap": [
+        "resources"
+      ]
+    },
+    "extra": {
       "laravel": {
-          "providers": [
-              "Najmul\\BkashPayment\\BkashServiceProvider"
-          ]
+        "providers": [
+          "Najmul\\BkashPayment\\BkashServiceProvider"
+        ]
       }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
   }
-}
+  
