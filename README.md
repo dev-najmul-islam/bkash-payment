@@ -48,6 +48,7 @@ Route	Description
 /bkash-search	View transaction search form
 /bkash-search (POST)	Search transaction
 /bkash-query/{paymentID}	Query payment status by ID
+
 📂 Views
 The package includes basic Blade views for:
 
@@ -65,11 +66,9 @@ To customize them, publish the views:
 
 bash
 
-
 php artisan vendor:publish --provider="Najmul\BkashPayment\BkashServiceProvider"
 Views will be published to:
 
-swift
 
 resources/views/vendor/bkash/
 🧠 How It Works
