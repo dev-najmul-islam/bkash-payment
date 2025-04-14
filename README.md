@@ -11,7 +11,9 @@ Built and maintained by **Najmul**.
 Install the package via Composer:
 
 ```bash
-composer require najmul/bkash-payment
+
+composer require najmul/bkash-payment:^1.0
+
 ⚙️ Configuration
 If you're using Laravel 5.5+ with package auto-discovery, you're good to go.
 
