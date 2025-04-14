@@ -361,7 +361,7 @@ class BkashController extends Controller
 
 
         return view('bkash::search')->with([
-            'response' => $response,
+            'response' => $response, 
         ]);
     }
 
