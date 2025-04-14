@@ -117,3 +117,5 @@ BKASH_APP_SECRET ='jcUNPBgbcqEDedNKdvE4G1cAK7D3hCjmJccNPZZBq96QIxxwAMEx'
 Phone : 01770618575
 Otp   : 123456
 Pin   : 12121
+
+You change controller and routes from vendor/najmul folder
