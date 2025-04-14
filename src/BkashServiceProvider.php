@@ -8,12 +8,16 @@ class BkashServiceProvider extends ServiceProvider
 {
     public function boot()
     {
+        // Load routes
         $this->loadRoutesFrom(__DIR__.'/routes/web.php');
-        $this->loadViewsFrom(__DIR__.'/resources/views', 'bkash');
 
+        // Load views from package
+        $this->loadViewsFrom(__DIR__.'/../resources/views', 'bkash');
+
+        // Publish views to app
         $this->publishes([
-            __DIR__.'/resources/views' => resource_path('views/vendor/bkash'),
-        ], 'bkash-views');
+            __DIR__.'/../resources/views' => resource_path('views/vendor/bkash'),
+        ], 'views'); // changed tag to 'views'
     }
 
     public function register()
