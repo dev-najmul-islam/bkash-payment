@@ -92,7 +92,7 @@ Then simulate transactions using bKash's sandbox credentials.
 This package is open-sourced software licensed under the MIT license.
 
 🙌 Author
-Najmul Hasan
+Najmul Islam
 GitHub: dev-najmul-islam
 Email: devnajmulislam52@gmail.com
 Laravel ❤️ bKash
